@@ -5,16 +5,27 @@
 }
 
 .header {
-    background-color: transparent;
-    border-bottom: 1px white solid;
-    height: 100px;
+    background-color: white;
+    border-bottom: 1px rgba(255,255,255,0.15) solid;
     transition: height 0.3s ease 0s, background 0.375s ease-in-out 0s, color 0.375s ease-in-out 0s;
+}
+
+@media (min-width: 992px) {
+    .header {
+        background-color: transparent;
+        height: 100px;
+    }
 }
 
 .header.small-header {
     background-color: white;
     border-bottom: 1px white solid;
-    height: 60px;
+}
+
+@media (min-width: 992px) {
+    .header.small-header {
+        height: 60px;
+    }
 }
 
 .container-fluid {
