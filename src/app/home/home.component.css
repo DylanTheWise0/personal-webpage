@@ -28,7 +28,37 @@
     }
 }
 
-.container-fluid {
-    height: 3000px;
+.introduction-text {
+    position: relative;
+    top: 50%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 3.5rem;
 }
 
+.about-section {
+    background-color: #2f2f4f;
+    padding-top: 40px;
+    padding-bottom: 15px;
+}
+
+.paragraph-text {
+    color: white;
+}
+
+.personal-photograph-container {
+    text-align: center;
+}
+
+.personal-photograph {
+    border-radius: 50%;
+    width: 200px;
+}
+
+.personal-photograph-column
+{
+    padding-bottom: 20px;
+}
