@@ -7,8 +7,6 @@ import { Component, OnInit, HostListener, ViewChild, ElementRef, AfterViewInit }
 })
 export class HomeComponent implements OnInit, AfterViewInit {
 
-  public isCollapsed = true;
-
   @ViewChild('headerElement') headerElement: ElementRef;
   @ViewChild('introductionSectionElement') introductionSectionElement: ElementRef;
 
@@ -53,6 +51,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       this.headerElement.nativeElement.classList.add('navbar-dark');
       this.headerElement.nativeElement.classList.remove('navbar-light');
     }
+    this.introductionSectionElement.nativeElement.style.height = window.innerHeight + 'px';
   }
 
 }
