@@ -51,6 +51,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       this.headerElement.nativeElement.classList.add('navbar-dark');
       this.headerElement.nativeElement.classList.remove('navbar-light');
     }
+    this.introductionSectionElement.nativeElement.style.height = window.innerHeight + 'px';
   }
 
 }
