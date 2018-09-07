@@ -30,6 +30,10 @@
     }
 }
 
+.introduction-container {
+    height: 750px;
+}
+
 .introduction-text {
     display: flex;
     flex-direction: column;
@@ -64,7 +68,11 @@
     width: 200px;
 }
 
-.personal-photograph-column
-{
+.personal-photograph-column {
     padding-bottom: 20px;
+}
+
+.experience-section {
+    background-color: #4f2f2f;
+    height: 500px;
 }
