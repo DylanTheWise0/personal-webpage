@@ -7,8 +7,9 @@ import { Component, OnInit, HostListener, ViewChild, ElementRef, AfterViewInit }
 })
 export class HomeComponent implements OnInit {
 
-  @ViewChild('headerElement') headerElement: ElementRef;
-  @ViewChild('introductionSectionElement') introductionSectionElement: ElementRef;
+  @ViewChild('HeaderElement') headerElement: ElementRef;
+  @ViewChild('IntroductionSectionElement') introductionSectionElement: ElementRef;
+  @ViewChild('ResumeSectionElement') resumeSectionElement: ElementRef;
 
   constructor() { }
 
@@ -18,6 +19,14 @@ export class HomeComponent implements OnInit {
       this.headerElement.nativeElement.classList.remove('navbar-dark');
       this.headerElement.nativeElement.classList.add('navbar-light');
     }
+  }
+
+  scrollToHomeSmoothly() {
+    this.introductionSectionElement.nativeElement.scrollIntoView({ block: 'start',  behavior: 'smooth' });
+  }
+
+  scrollToResumeSmoothly() {
+    this.resumeSectionElement.nativeElement.scrollIntoView({ block: 'start',  behavior: 'smooth' });
   }
 
   @HostListener('window:scroll', ['$event'])  onWindowScroll($event) {

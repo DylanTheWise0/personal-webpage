@@ -1,17 +1,17 @@
 <div class="page-container">
-  <nav #headerElement class="header navbar navbar-expand-lg fixed-top navbar-dark">
+  <nav #HeaderElement class="header navbar navbar-expand-lg fixed-top navbar-dark">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link active" href="javascript:void(0)">About <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="javascript:void(0)">Resume</a>
-          <a class="nav-item nav-link" href="javascript:void(0)">Contact</a>
+        <a data-toggle="collapse" data-target=".navbar-collapse.show" (click)="scrollToHomeSmoothly($event)" class="nav-item nav-link active" href="javascript:void(0)">About <span class="sr-only">(current)</span></a>
+        <a data-toggle="collapse" data-target=".navbar-collapse.show" (click)="scrollToResumeSmoothly($event)" class="nav-item nav-link" href="javascript:void(0)">Resume</a>
+        <!-- <a data-toggle="collapse" data-target=".navbar-collapse.show" class="nav-item nav-link" href="javascript:void(0)">Contact</a> -->
       </div>
     </div>
   </nav>
-  <div #introductionSectionElement class="container-fluid introduction-container">
+  <div #IntroductionSectionElement class="container-fluid introduction-container">
     <div class="introduction-text">HELLO, MY NAME IS DYLAN WISE.</div>
   </div>
   <div class="container-fluid about-section">
@@ -21,26 +21,124 @@
           <div class="personal-photograph-container"><img class="personal-photograph" src="../../assets/photos/personal-photograph.jpg"></div>
         </div>
         <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
-          <p class="paragraph-text">
+          <p class="white-text">
             Hello! My name is Dylan. I am a software developer currently living in Louisville, KY. I am very passionate about
             programming and front end development.
           </p>
-          <p class="paragraph-text">
+          <p class="white-text">
             I am a University of Kentucky graduate with a Bachelor of Science in Computer Science. While attending at the University
             I worked in the Department of Statistics assisting grad students with gathering data by scraping the web heavily using
             regular expressions so that they could do analysis. I also worked on developing interactive front end web applications using
             R with RStudio and Shiny.
           </p>
-          <p class="paragraph-text">
+          <p class="white-text">
             I currently work for UPS as a front end developer creating web apps using Angular. 
           </p>
         </div>
       </div>
     </div>
   </div>
-  <div class="container-fluid experience-section">
+  <div #ResumeSectionElement class="container-fluid experience-section">
     <div class="container">
       <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+          <h3 class="white-text">Education</h3>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+              <h4 class="white-text">University of Kentucky</h4>
+              <p class="white-text">Aug 2013 - Dec 2016</p>
+            </div>
+            <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
+              <p class="white-text bold-text">Bachelor Of Science - Computer Science</p>
+              <p class="white-text">
+                This is my primary education. While attending here the primary languages that was used in most of my classes were C++ and
+                Python. However when I was learning 3-D we used Java. Of course any front end experience I gained in school was JavaScript
+                with some use of frameworks, mostly Bootstrap and JQuery.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+          <h3 class="white-text">Careers</h3>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+              <h4 class="white-text">UPS</h4>
+              <p class="white-text">Jan 2016 - Present</p>
+            </div>
+            <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
+              <p class="white-text bold-text">Applications Developer</p>
+              <p class="white-text">
+                  In the time I have been here I have developed, from scratch, a health monitor for our main application, which used multi-threading techniques,
+                  using C# and WPF that is still used daily to check the health of the system. I also developed, from scratch, a front end web application written
+                  in Typescript using the Angular framework. I taught myself how to use Angular to develop a completely new application meant to replace a current
+                  deprecated application. This application utilized mapping software integrated into Angular application to plot all UPS equipment available in the
+                  US for use out in the operation. On top of this I taught newly added developers on team how to use Angular.
+              </p>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+              <h4 class="white-text">University Of Kentucky</h4>
+              <p class="white-text">June 2015 – Dec 2016</p>
+            </div>
+            <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
+              <p class="white-text bold-text">Department IT, System Admin, and Programmer</p>
+              <p class="white-text">
+                While working here I used system administration tools such as PDQ Deploy and PDQ Inventory to remotely update and keep track of all student, 
+                professor, and TA computers in the department. I also made various scripts and programs that assisted graduates and the department get data
+                they needed for their own projects. I also used tools such as Shiny for R to plot the data obtained.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+          <h3 class="white-text">Technologies</h3>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+              <h4 class="white-text">Skilled</h4>
+              <ul class="white-text">
+                <li>JavaScript</li>
+                <li>HTML5/CSS3</li>
+                <li>TypeScript</li>
+                <li>Angular</li>
+                <li>JQuery</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>C++</li>
+                <li>C#</li>
+                <li>SQL</li>
+                <li>Selenium</li>
+                <li>Regular Expressions</li>
+                <li>Version Control (Git and TFS)</li>
+                <li>Agile Methodology</li>
+              </ul>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+              <h4 class="white-text">Passing Knowledge</h4>
+              <ul class="white-text">
+                <li>PHP</li>
+                <li>Ruby</li>
+                <li>NodeJS</li>
+                <li>R/Shiny</li>
+                <li>Couchbase/NoSQL</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -55,8 +55,12 @@
     padding-bottom: 15px;
 }
 
-.paragraph-text {
+.white-text {
     color: white;
+}
+
+.bold-text {
+    font-weight: bold;
 }
 
 .personal-photograph-container {
@@ -74,5 +78,15 @@
 
 .experience-section {
     background-color: #4f2f2f;
-    height: 500px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid white;
+    margin: 1em 0;
+    padding: 0; 
 }
