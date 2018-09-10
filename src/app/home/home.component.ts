@@ -5,7 +5,7 @@ import { Component, OnInit, HostListener, ViewChild, ElementRef, AfterViewInit }
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit, AfterViewInit {
+export class HomeComponent implements OnInit {
 
   @ViewChild('headerElement') headerElement: ElementRef;
   @ViewChild('introductionSectionElement') introductionSectionElement: ElementRef;
@@ -18,11 +18,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
       this.headerElement.nativeElement.classList.remove('navbar-dark');
       this.headerElement.nativeElement.classList.add('navbar-light');
     }
-  }
-
-  ngAfterViewInit() {
-    // make introduction element fit the window upon initial load
-    this.introductionSectionElement.nativeElement.style.height = window.innerHeight + 'px';
   }
 
   @HostListener('window:scroll', ['$event'])  onWindowScroll($event) {
@@ -51,7 +46,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
       this.headerElement.nativeElement.classList.add('navbar-dark');
       this.headerElement.nativeElement.classList.remove('navbar-light');
     }
-    this.introductionSectionElement.nativeElement.style.height = window.innerHeight + 'px';
   }
 
 }
